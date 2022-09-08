@@ -232,7 +232,7 @@ function isVowel(vowel) {
     return false;
   }
 }
-console.log(isVowel("Z"));
+// console.log(isVowel.toUpperCase("z"));
 
 // E. getTwoLengths
 
@@ -264,5 +264,57 @@ const maxOfThree = (a, b, c) => {
 console.log(maxOfThree(6, 9, 1));
 
 const printLongestWord = (arr) => {
-    
+    let bigWord = ""
+  for(let i = 0; i < arr.length; i++){
+    for(let j = 0; j < arr[j].length; j++){
+        if(arr[j] > arr[j]){
+            bigWord = arr[j]
+        }
+    }
+  }
+      
+}
+// console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+
+// ======= Objects ========
+
+// A. Make A User Object
+
+const user ={
+    name:"John Hancock", email:"jhancock@biz.biz", age: 21, purchased:[]
+}
+// B. Update User
+user.email = "john@biz.biz"
+user.age = user.age+1
+
+// C Adding keys & values
+user.location = 'Somewhere in America'
+
+// D. Shopaholic!
+user.purchased.push('carbohydrates', 'peace of mind', 'Merino jodhphurs')
+console.log(user.purchased[2])
+
+// E. Object-within-object
+user.friend = { name: "Jane Doe", email:"jane@biz.biz", age: 23, purchased:[], location:'Somewhere in America'}
+console.log(user.friend.name)
+console.log(user.friend.location)
+user.friend.age = 55
+user.friend.purchased.push("The One Ring", 'A Latte')
+console.log(user)
+
+// F. Loops
+for (let i = 0; i < user.purchased.length; i++){
+    console.log(user.purchased[i])
+}
+for (let i = 0; i < user.friend.purchased.length; i++){
+    console.log(user.friend.purchased[i])
+}
+// G. Functions can operate on objects
+
+user.userFunction = function updateUser() {
+    user.age += 1
+}
+console.log(user)
+function updateUser(person) {
+    person user.age += 1
 }
