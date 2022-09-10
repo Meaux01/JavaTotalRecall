@@ -220,101 +220,101 @@ console.log(calculateCube(5));
 // D. isVowel
 function isVowel(vowel) {
   if (
-    vowel === "a" ||
-    vowel === "e" ||
-    vowel === "i" ||
-    vowel === "o" ||
-    vowel === "u" ||
-    vowel === "y"
+    vowel.toUpperCase() === "A" ||
+    vowel.toUpperCase() === "E" ||
+    vowel.toUpperCase() === "I" ||
+    vowel.toUpperCase() === "O" ||
+    vowel.toUpperCase() === "U" ||
+    vowel.toUpperCase() === "Y"
   ) {
     return true;
   } else {
     return false;
   }
 }
-// console.log(isVowel.toUpperCase("z"));
+console.log(isVowel("a"));
 
 // E. getTwoLengths
 
-const getTwoLengths = (i, j) => {
-  return [i.length, j.length];
-};
-console.log(getTwoLengths("Hank", "Hippopopalous"));
+// const getTwoLengths = (i, j) => {
+//   return [i.length, j.length];
+// };
+// console.log(getTwoLengths("Hank", "Hippopopalous"));
 
-// F. Get Multiple Lengths
-const getMultipleLengths = (arr) => {
-  return arr.map(function (word) {
-    return word.length;
-  });
-};
-console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+// // F. Get Multiple Lengths
+// const getMultipleLengths = (arr) => {
+//   return arr.map(function (word) {
+//     return word.length;
+//   });
+// };
+// console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 
-// G. Max of Three
-const maxOfThree = (a, b, c) => {
-  if (a > b && a > c) {
-    return a;
-  }
-  else if (b > c && b > a) {
-    return b;
-  }
-  else if (c > b && c > b) {
-    return c;
-  }
-};
-console.log(maxOfThree(6, 9, 1));
+// // G. Max of Three
+// const maxOfThree = (a, b, c) => {
+//   if (a > b && a > c) {
+//     return a;
+//   }
+//   else if (b > c && b > a) {
+//     return b;
+//   }
+//   else if (c > b && c > b) {
+//     return c;
+//   }
+// };
+// console.log(maxOfThree(6, 9, 1));
 
-const printLongestWord = (arr) => {
-    let bigWord = ""
-  for(let i = 0; i < arr.length; i++){
-    for(let j = 0; j < arr[j].length; j++){
-        if(arr[j] > arr[j]){
-            bigWord = arr[j]
-        }
-    }
-  }
+// const printLongestWord = (arr) => {
+//     let bigWord = ""
+//   for(let i = 0; i < arr.length; i++){
+//     for(let j = 0; j < arr[j].length; j++){
+//         if(arr[j] > arr[j]){
+//             bigWord = arr[j]
+//         }
+//     }
+//   }
       
-}
-// console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+// }
+// // console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
 
-// ======= Objects ========
+// // ======= Objects ========
 
-// A. Make A User Object
+// // A. Make A User Object
 
-const user ={
-    name:"John Hancock", email:"jhancock@biz.biz", age: 21, purchased:[]
-}
-// B. Update User
-user.email = "john@biz.biz"
-user.age = user.age+1
+// const user ={
+//     name:"John Hancock", email:"jhancock@biz.biz", age: 21, purchased:[]
+// }
+// // B. Update User
+// user.email = "john@biz.biz"
+// user.age = user.age+1
 
-// C Adding keys & values
-user.location = 'Somewhere in America'
+// // C Adding keys & values
+// user.location = 'Somewhere in America'
 
-// D. Shopaholic!
-user.purchased.push('carbohydrates', 'peace of mind', 'Merino jodhphurs')
-console.log(user.purchased[2])
+// // D. Shopaholic!
+// user.purchased.push('carbohydrates', 'peace of mind', 'Merino jodhphurs')
+// console.log(user.purchased[2])
 
-// E. Object-within-object
-user.friend = { name: "Jane Doe", email:"jane@biz.biz", age: 23, purchased:[], location:'Somewhere in America'}
-console.log(user.friend.name)
-console.log(user.friend.location)
-user.friend.age = 55
-user.friend.purchased.push("The One Ring", 'A Latte')
-console.log(user)
+// // E. Object-within-object
+// user.friend = { name: "Jane Doe", email:"jane@biz.biz", age: 23, purchased:[], location:'Somewhere in America'}
+// console.log(user.friend.name)
+// console.log(user.friend.location)
+// user.friend.age = 55
+// user.friend.purchased.push("The One Ring", 'A Latte')
+// console.log(user)
 
-// F. Loops
-for (let i = 0; i < user.purchased.length; i++){
-    console.log(user.purchased[i])
-}
-for (let i = 0; i < user.friend.purchased.length; i++){
-    console.log(user.friend.purchased[i])
-}
-// G. Functions can operate on objects
+// // F. Loops
+// for (let i = 0; i < user.purchased.length; i++){
+//     console.log(user.purchased[i])
+// }
+// for (let i = 0; i < user.friend.purchased.length; i++){
+//     console.log(user.friend.purchased[i])
+// }
+// // G. Functions can operate on objects
 
-user.userFunction = function updateUser() {
-    user.age += 1
-}
-console.log(user)
-function updateUser(person) {
-    person user.age += 1
-}
+// user.userFunction = function updateUser() {
+//     user.age += 1
+// }
+// console.log(user)
+// function updateUser(person) {
+//     person = user.age += 1
+// }
