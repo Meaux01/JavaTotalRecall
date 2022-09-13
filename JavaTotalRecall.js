@@ -263,17 +263,15 @@ console.log(isVowel("a"));
 // };
 // console.log(maxOfThree(6, 9, 1));
 
-// const printLongestWord = (arr) => {
-//     let bigWord = ""
-//   for(let i = 0; i < arr.length; i++){
-//     for(let j = 0; j < arr[j].length; j++){
-//         if(arr[j] > arr[j]){
-//             bigWord = arr[j]
-//         }
-//     }
-//   }
-      
-// }
+const printLongestWord = (arr) => {
+  let bigWord = arr[0]
+  for(let i = 0; i < arr.length; i++){
+    if(bigWord < arr[i].length){
+       bigWord = arr[i]
+    }
+  }
+    return bigWord  
+}
 // // console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
 
 // // ======= Objects ========
